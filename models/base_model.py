@@ -1,11 +1,15 @@
 #!/usr/bin/python3
+""" Creation of a class BaseModel """
 
 import uuid
 from datetime import datetime
 
 
 class BaseModel:
+    """ BaseModel class initialization """
+
     def __init__(self, *args, **kwargs):
+        """ Initialization """
 
         if kwargs:
             for key, value in kwargs.items():
@@ -22,15 +26,18 @@ class BaseModel:
             self.updated_at = datetime.now()
 
     def __str__(self):
+        """ Return a string representation """
 
         class_name = self.__class__.__name__
         return "[{}] ({}) <{}>".format(class_name, self.id, self.__dict__)
 
     def save(self):
+        """ Save method """
 
         self.updated_at = datetime.now()
 
     def to_dict(self):
+        """ Return a dictionnary """
 
         data = self.__dict__.copy()
         data['__class__'] = self.__class__.__name__
