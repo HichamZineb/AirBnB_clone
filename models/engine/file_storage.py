@@ -8,6 +8,7 @@ import os
 import uuid
 from datetime import datetime
 from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
@@ -17,7 +18,7 @@ class FileStorage:
     __objects = {}
 
     class_map = {
-        "BaseModel": BaseModel,
+            "BaseModel": BaseModel, "User": User,
     }
 
     def all(self):
