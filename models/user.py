@@ -2,6 +2,7 @@
 """ Creation of a class User """
 from models.base_model import BaseModel
 
+
 class User(BaseModel):
     """ User class initialization """
     email = ""
