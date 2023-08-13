@@ -4,13 +4,14 @@
 import cmd
 from models import storage
 from models.base_model import BaseModel
+from models.user import User
 
 
 class HBNBCommand(cmd.Cmd):
     """ Command interpreter class """
     prompt = "(hbnb) "
     class_map = {
-        "BaseModel": BaseModel,
+            "BaseModel": BaseModel, "User": User,
     }
 
     def do_quit(self, line):
