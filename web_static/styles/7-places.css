@@ -6,6 +6,7 @@
 .places h1 {
 		top: 0;
 		left: 0;
+		margin: 10px;
 		font-size: 30px;
 		width: 100%;
 }
